@@ -10,4 +10,18 @@ PPModalStatusHUD replicates the system default HUD, that appears in the Music, P
 ```ruby
 pod 'PPModalStatusHUD', :git => 'https://github.com/prateek550/PPModalStatusHUD.git'
 ```
+## Usage
 
+Create HUD view instance:
+    
+    let hudView: PPModalStatusView! = PPModalStatusView(frame: self.view.frame)
+
+Customize image, title, description of HUD:
+    
+    hudView.set(image: UIImage(named: "tick"), headerText: "Title Text", descriptionText: "some description")
+ 
+ Present HUD:
+     
+     self.view.addSubview(hudView)
+
+#### Note:- presented hud view will automatically disappear and will be removed from the view hierarchy.
